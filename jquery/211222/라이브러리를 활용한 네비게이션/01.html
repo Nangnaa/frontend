@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>kwicks 네비게이션</title>
+<style>
+body {
+    margin: 0;
+	padding: 50px;
+	font-family: "맑은 고딕";
+	font-size: 0.9em;
+}
+ul,li{list-style: none;}
+
+ul.nav{position: relative; margin: 0; padding: 0;}
+ul.nav > li{ width:20%; height: 300px;}
+ul.nav > li:nth-child(1){background-color: aqua;}
+ul.nav > li:nth-child(2){background-color: red;}
+ul.nav > li:nth-child(3){background-color: blue;}
+ul.nav > li:nth-child(4){background-color: green;}
+ul.nav > li:nth-child(5){background-color: yellow;}
+</style>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.kwicks-1.5.1.pack.js"></script>
+<script>
+    $(function(){
+        $("ul.nav").kwicks({
+            max:1500, //최대값을 줄 때 현재 부모의 가로값보다는 적게 적용하고 남는 값은 나머지 li에게 배분
+            spacing:5,
+            isHorizontal:true, //isVertical:true 방향설정
+            behavior:"menu",
+            easing:"easeOutBounce"
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<ul class="nav">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+</ul>
+</body>
+</html>

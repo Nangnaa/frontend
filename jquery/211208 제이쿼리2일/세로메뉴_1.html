@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로메뉴</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        /* reset */
+        *{margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul,li{list-style: none;}
+        a{text-decoration: none; color: #555;}
+
+        /* 메뉴레이아웃 */
+        .main_mn{width: 125px;
+            margin: 50px;
+        border: 2px solid #555;}
+        .main_mn > li{border-bottom: 2px solid coral;}
+        .main_mn li div{width: 100%;
+        height: 30px;
+        border-bottom: 1px solid coral;
+        background-color: antiquewhite;
+        text-align:center;
+        line-height: 30px;}
+        .main_mn li div:hover{
+            background-color: pink;
+        }
+        .sub_mn li a{font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main_mn">
+        <li class="mn1">
+            <div>menu</div>
+            <ul class="sub_mn">
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+            </ul>
+        </li>
+        <li class="mn2">
+            <div>menu</div>
+            <ul class="sub_mn">
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+            </ul>
+        </li>
+        <li class="mn3">
+            <div>menu</div>
+            <ul class="sub_mn">
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+            </ul>
+        </li>
+        <li class="mn4">
+            <div>menu</div>
+            <ul class="sub_mn">
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+                <li><a href="#">s_menu</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $(".sub_mn").hide();
+            $(".main_mn li > div").click(function(){
+                $(this).next(".sub_mn").show(); //$(this) 상대적인 선택
+            });
+        });
+    </script>
+</body>
+</html>

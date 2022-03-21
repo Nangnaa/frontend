@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀다운메뉴</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        /* 기본스타일 */
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none; color: #555;}
+
+
+        /* 메뉴레이아웃 */
+        div{width: 100px; height: 100px; 
+            border: 1px solid #000;} 
+            
+        .box04{position:absolute; top:500px; left:0;}  
+    </style>
+    <script>
+        $(document).ready(function(){
+           //css() 제이쿼리로 스타일 적용하는 메소드;
+           //css("background-color","red") ,css({background-color:"red",width:"100px";})
+
+           //animate({css선언},1000)  1000 = 1초
+           //.css()부분이 animate()에 적용할때 애니메이션의 시작값을 설정
+           //.stop() 현재 요소 애니메이션 작동전에 애니메이션들을 중지
+           //.delay() 애니메이션의대기 시간
+ 
+           $(".box01").css({width:"100px"}).animate({width:"1000px"},1000);
+           //$(".box02").css("background-color","red").animate("background-color","blue");
+           $(".box03").css({fontSize:"15px"}).animate({fontSize:"50px"},500);
+           $(".box04").css({left:"0px"}).animate({left:"1000px"},1000);
+           $(".box05").css({opacity:0}).animate({opacity:1},500);
+             
+ 
+        });
+    </script>
+</head>
+<body>
+   
+  <div class="box01">box01</div>
+  <div class="box02">box02</div>
+  <div class="box03">box03</div>
+  <div class="box04">box04</div>
+  <div class="box05">box05</div>
+
+
+  <!--  
+    [animate({여기에 들어가는 스타일시트 방식})]
+    backgroundPositionX
+    backgroundPositionY
+    borderBottomWidth
+    borderLeftWidth
+    borderRightWidth
+    borderSpacing
+    borderTopWidth
+    borderWidth
+    bottom
+    fontSize
+    height
+    left
+    letterSpacing
+    lineHeight
+    margin
+    marginBottom
+    marginLeft
+    marginRight
+    marginTop
+    maxHeight
+    maxWidth
+    minHeight
+    minWidth
+    opacity
+    outlineWidth
+    padding
+    paddingBottom
+    paddingLeft
+    paddingRight
+    paddingTop
+    right
+    textIndent
+    top
+    width
+    wordSpacing
+    -->
+
+</body>
+</html>

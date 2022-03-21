@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="js/jquery.js"></script>
+    <style>
+        /*기본 스타일*/
+        *{margin:0; padding:0; border:0; list-style: none;} 
+
+        /*레이아웃스타일*/
+        #menu{width: 500px; height:25px; border: 1px solid #ccc;}
+        #menu > ul{}
+        #menu > ul > li{ float:left; width: 100px; text-align: center; line-height: 25px; }
+        #menu ul.sub{width: 100px; border:1px solid #ccc;}
+        #menu ul.sub > li {border-bottom: 1px solid #ccc;}
+    </style>
+<script> //페이지이벤트할떄 위 스크립트
+    // $(document).ready(function(){
+
+    // });
+</script>
+</head>
+<body style="height: 5000px;">
+    
+
+    <nav id="menu">
+        <ul>
+            <li>menu
+                <ul class="sub">
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                </ul>
+            </li>
+            <li>menu
+                <ul class="sub">
+                <li>s_mn</li>
+                <li>s_mn</li>
+                <li>s_mn</li>
+                <li>s_mn</li>
+            </ul></li>
+            <li>menu
+                <ul class="sub">
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                </ul>
+            </li>
+            <li>menu
+                <ul class="sub">
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                </ul>
+            </li>
+            <li>menu
+                <ul class="sub">
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                    <li>s_mn</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>// 마우스이벤트
+        $(document).ready(function(){
+            // $('sub').css({display:"none"}); 
+            $(".sub").hide();
+
+            $("#menu > ul > li").hover(
+                function(){ //마우스를 올리면 목록이 보이도록
+                    //$(this).find(".sub").show(1000); //책이 펴지듯이 나옴
+                     //제이쿼리 애니메이션시간
+                    //1000이 1초를 의미
+                    // $(this).find(".sub").fadeIn(1000); //서서히 나타남
+                    // $(this).find(".sub").slideDown(1000);
+                    $(this).find(".sub").stop().css({opacity:"0"}).animate({opacity:"1"},1000);
+                    //이게 열렷을때 animate 작동하고 스톱을하면 이거 실행이되면서 스톱
+                },
+                function(){
+                    // $(this).find(".sub").hide(500);
+                    // $(this).find(".sub").fadeout(1000);
+                    // $(this).find(".sub").slideUp(1000);//블라인드처럼 위아래로 
+                    $(this).find(".sub").stop().css({opacity:"1"}).animate({opacity:"0"},1000);
+
+
+                }
+            );
+    });
+    </script>
+</body>
+</html>

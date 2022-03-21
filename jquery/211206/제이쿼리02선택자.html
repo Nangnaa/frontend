@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="js/jquery.js"></script>
+</head>
+<body>
+ <script>
+     //제이쿼리 선택
+     $(document).ready(function(){ //document.write 
+         //document에서 ready읽으면 실행해라
+         //$("ul").css({color:"red"}); //ul에다가 스타일시트를 적용하겟다
+        //태그명으로 선택
+        //$(".li02").css({color:"red"}); //클래스
+        //$("#li02").css({color:"red"}); //아이디
+        $("#list > .li02").css({color:"red"});//자식선택자
+        $(".li02 + li").css({color:"red"}); //인접형제선택자
+        $(".li02 ~ li").css({color:"red"}); //형제선택자
+        $("#list + li:frist").css({color:"red"}); //첫번째 자식요소
+        $("#list + li:last").css({color:"red"}); //마지막 자식요소
+        $("#list + li:nth-child(2)").css({color:"red"});//몇번째 자식요소
+        });
+ </script>   
+
+ <ul id="list">
+     <!-- li*5 -->
+     <li>1-1-1</li>
+     <li class="li02">1-1-2</li>
+     <li id="li03">1-1-3</li>
+     <li>1-1-4</li>
+     <li>1-1-5</li>
+ </ul>
+ <!-- 젠코드 div.box*3 div#box div.box#box div.box$*5-->
+ <!--
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div id="box" ></div>
+ *-->
+ 
+</body>
+
+</html>

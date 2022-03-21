@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .container{ margin-top: 35px;}
+     .ball{ position: absolute;
+            left: 40px; top: 120px;
+            width: 30px; height: 30px;
+            background-color: aquamarine;
+            border-radius: 50%;
+            cursor: pointer;}
+     .effect{transform: scale(2);}     
+     
+     button{ padding: 5px 15px;
+             background-color: #666;
+             color: #000;
+             border: none;
+             cursor: pointer;
+             border-radius: 5px;}
+     button:hover{ background-color: #888;}       
+     
+    </style>
+    <script>
+       window.addEventListener("load", function(){
+       var container = document.getElementsByClassName("container")[0];
+       var buttonList = [];
+       
+
+       for(var i = 0; i < container.children.length; i++){
+              
+        //버튼과 볼을 구분해서 대상으로 지정
+         if(container.children[i].tagName == "BUTTON" ){
+            buttonList.push(container.children[i]);
+         }else if(container.children[i].tagName == "DIV"){
+             var ball = container.children[i]
+         }// if문닫기
+       }//for문닫기
+
+
+       var idName="";
+	   var x=40;
+	   var y=184;
+       for(i=0; i<buttonList.length; i++){//addEventListener여러번 사용하지않고 하나의 각각대상별 기능을 부여
+            buttonList[i].addEventListener("click", function(e){
+                idName = e.target.id;
+                // if(idName == "left"){
+                //     x=x-20;
+                // }
+                // else if(idName == "right"){
+				//     x=x+20;
+                // }
+                // else if(idName == "top"){
+                //     y=y-20;
+                // }
+                // else if(idName == "bottom"){
+                //     y=y+20;
+                // }
+                switch(idName){
+                 case "left": x=x-20; break;
+                 case "right": x=x+20; break;
+                 case "top": y=y-20;; break;
+                 case "bottom":  y=y+20; break;
+
+                }
+                console.log("x : "+x+", y : "+y);//좌표값확인
+
+                ball.style.left = x + "px";
+			    ball.style.top= y + "px";
+            });//반복문에 의한 이벤트 닫기
+       }//버튼기능의 부여 반복문 닫기
+
+       
+    
+    
+       //    var ball = container.children[0]
+       //    ball.addEventListener("click", function(e){
+       //             e.target.classList.toggle("effect");
+       //    });
+
+
+
+       });//window.addEventListener닫기
+    </script>
+</head>
+<body>
+    <div class="container">
+       <!-- 버튼 -->
+       <button id="left">left</button>
+       <button id="right">right</button>
+       <button id="top">top</button>
+       <button id="bottom">bottom</button><br>
+
+       <div class="ball"></div>
+    </div>
+</body>
+</html>

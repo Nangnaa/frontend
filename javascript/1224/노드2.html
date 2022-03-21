@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #portfolio{font-size: 20px; background-color: blueviolet;}
+        #portfolio_s{font-size: 20px; background-color: rgb(137, 226, 36);}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+		<ul id="tutorial">
+			<li class="html">HTML</li>
+			<li class="css">CSS</li>
+			<li class="css3">CSS3</li>
+			<li class="javascript">JavaScript</li>
+			<li class="jquery">jQuery</li>
+			<li class="blank"></li>
+		</ul>
+		<p id="portfolio">portfolio</p>
+        
+	</div>
+
+
+    <script>
+    "use strict"
+    //노드의 태그 이름 속성
+    // element.tagName
+    //  var html = document.querySelector(".html");
+    //  var tagName = html.tagName;
+    //  console.log("tagName: "+ tagName);
+
+    //노드의 Id 속성
+    // element.id
+    //   var ul = document.querySelector("#tutorial");
+    //   var idName = ul.id;
+    //   console.log("idName:"+ idName);
+
+    //노드의 클래스 이름 속성
+    // element.className
+    //   var li=document.querySelectorAll("#tutorial li");
+    //   for(var i =0; i <li.length; i++){
+    // 노드의 클래스 이름
+    // element.className
+    //    if(li[i].className == "html"){//클래스명이 html만 선택
+    //       li[i].style.backgroundColor = "#666";
+    //    }
+    //   }
+
+
+    //노드의 속성읽기
+    //element.getAttribute(attributename)
+    //  var li = document.querySelectorAll("#tutorial li");
+    //  for(var i= 0; i< li.length; i++){
+
+    //    var classNmae = li[i].getAttribute("class");
+    //    console.log("classNmae:" + classNmae);
+
+    //  }
+ 
+
+    // 노드의 속성 제거
+    // element.removeAttribute(attributename)
+    // var p=document.querySelectorAll("p");
+
+    // for(var i=0; i<p.length; i++){
+    //     if(p[i].textContent == "portfolio"){
+    //         p[i].removeAttribute("id");
+    //     }
+    // }
+
+
+
+
+    // 노드의 속성 변경
+    // element.setAttribute(attributename, attributevalue)
+   
+    // var p=document.querySelectorAll("p");
+
+    // for(var i=0; i<p.length; i++){
+    //     if(p[i].textContent == "portfolio"){
+    //         p[i].setAttribute("id","portfolio_s");
+    //     }
+    // }
+    //console.log()
+
+
+    // 노드의 속성이 있는지 점검
+    // element.hasAttribute(attributename)
+    // Return Value : A Boolean
+    var p=document.querySelectorAll("p");
+
+    for(var i=0; i<p.length; i++){
+        if(p[i].hasAttribute("id")){
+            p[i].style.backgroundColor="#666";
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

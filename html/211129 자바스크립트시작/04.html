@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<h1>논리연산자</h1>
+  
+ <!-- 
+   논리 연산자는 주어진 논리식을 판단하여 참과 거짓을 반환합니다.
+
+    and(&&) 연산
+    두 논리식 모두 참이면 참을 반환하는 연산자
+     A     &&     B          결과
+    true        true        true
+    true        false       false
+    false       true        false
+    false       false       false
+
+    or(||) 연산
+    두 논리식 중 하나라도 참이면 참을 반환하는 연산자
+      A     ||     B          결과
+    true        true        true
+    true        false       true
+    false       true        true
+    false       false       fals
+
+
+    not(!) 연산자
+    논리식의 결과가 참이면 거짓으로, 거짓이면 참으로 변환하는 연산자
+     A           !결과
+    true        false
+    false       true
+
+
+    삼항 연산자
+    조건식에 따른 참, 거짓에 따라 반환값이 달라지는 연산자
+
+                            true   false
+                            -----  -----
+        변수(상수) = 조건식 ? 결과1 : 결과2
+                    ------
+                    true 또는 false
+        var a = 20;
+        var b = 10;
+        var max = a > b ? c="true" : c ="flase" ;
+        document.write(c)       
+  -->
+
+    
+ <script>
+   a = 10;
+   b = 10;
+ 
+  
+   c =  a < b &&  a == b
+   document.write(c +"<br>");
+    
+   c =  a < b || a == b
+   document.write(c +"<br>");
+ </script>
+
+
+
+
+</body>
+</html>

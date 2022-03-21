@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 3000px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }.box0{
+            background-color: black;
+        }.box01 {
+            position: absolute; /* 화면기준 */
+            top: 200px;
+            left: 200px;
+            background-color: darkred;
+        }.box02 {
+            position: relative; /* 포지션이 선언되지 않은 앞의 요소 기준 */
+            top: 200px;
+            left: 200px;
+            background-color: palevioletred;  
+        }.box03 {
+            position: fixed; /* 스크롤에 영향을 받지 않는 고정 위치 */
+            top: 500px;
+            left: 600px;
+            background-color: lightcoral; 
+        }.box-area {
+            position: relative; /* 자식 태그 요소에게 기준을 설정해주는 역할 */
+            width: 1000px;
+            height: 200px;
+            background-color: gray;
+            margin-top: 500px;
+        }.ttl {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box0">box0</div>
+    <div class="box01">box01</div>
+    <div class="box02">box02</div>
+    <div class="box03">box03</div>
+
+    <div class="box-area">
+        <h1 class="ttl">제목</h1>
+    </div>
+</body>
+</html>

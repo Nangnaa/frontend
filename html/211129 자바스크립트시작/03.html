@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<h1>비교연산자</h1>
+  
+ <!-- 
+   > : 크다
+   < : 작다
+   >= : 크거나 같다
+   <= : 작거나 같다
+   == : 같다 ("10" == 10 는 true -> 타입이 달라도 값이 같으면 참)
+   === : 같다 ("10" === 10 는 false -> 타입과 값이 같아야 참)
+   != : 다르다 (값만 같으면 false, 값이 같으면 true)
+   !== : 다르다 (값, 타입 둘 중 하나만 다르면 true)
+  -->
+
+    
+ <script>
+   a = 10;
+   b = 5;
+   c = a > b; //참인상태
+   str1 = "5"
+
+   document.write(c + "<br>")//true
+
+   c = a < b;
+   document.write(c + "<br>")//false
+
+   c = a != b;
+   document.write(c + "<br>")//true
+
+   c =  b == str1
+   document.write(c + "<br>")//true
+
+   c =  b === str1
+   document.write(c + "<br>")//false
+ </script>
+
+
+
+
+</body>
+</html>

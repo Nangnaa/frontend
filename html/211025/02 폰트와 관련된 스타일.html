@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- [폰트와 관련된 스타일]
+
+- font-family : 글꼴, 글꼴 이름은 쉼표로 구분, 글꼴 이름이 두 단어 이상이면 큰 따옴표로 묶는다.
+                브라우저는 앞에 있는 글꼴부터 보여준다
+
+- font-style "normal, italic, oblique" : 기울임꼴 적용
+
+- font-variant "normal, small-caps" : small-cap 크기가 작은 대문자
+
+- font-weight "normal, bold, 100~900" : 글자 굵기 (숫자는 인식 못하는 경우도 있음)
+
+- font-size "숫자em(상위 element 크기의 배수), 숫자pt" : 글자 크기 유전되지 않음
+
+- color : 글자 색상 설정 (키워드 또는 rgb 코드 입력) -->
+    <style>
+        /* 선택자 { 속성1 : 속성값1; 속성2 : 속성값2; } */
+        
+        * {
+            color: cadetblue;
+            font-family: "맑은고딕";
+            font-size: 20px;
+        }
+        
+        h1 {
+            color: darkgreen;
+        }.txt3 {
+            font-style: italic;
+        }
+        
+        p {
+            color: indigo;
+        }.txt {
+            font-weight: 300;
+        }.txt2 {
+            font-weight: 600;
+        } #txt {
+            font-size: 50px;
+        }
+
+        span {
+            font-family: "바탕체";
+            color: crimson;
+        }
+        
+        .name {
+            font-variant: small-caps;
+        }
+        /* 
+            * 전체 선택자 (모든 요소의 스타일 적용)
+            .class_name 클래스 선택자
+            #id_name 아이디 선택자 (하나의 선택 요소만 적용, 다중 아이디도 에러가 나지는 않음)
+            아이디 > 클래스 > 태그 > 전체 (우선순위)
+        */
+    </style>
+</head>
+
+<body>
+    <!-- <font size="10" color="red">내부 스타일</font> -->
+    <h1>CHOI JIWON</h1>
+    <h1 class="name">choi jiwon</h1>
+    <h1>제목1입니다</h1>
+    <h3><i>서브제목입니다</i></h3>
+    <h3 class="txt3">서브제목입니다</h3>
+    <p class="txt" id="txt">문단태그입니다</p>
+    <p class="txt">문단태그입니다</p>
+    <p class="txt2">문단태그입니다</p>
+    <p class="txt2">문단태그입니다</p>
+    <a href="#">버튼입니다</a>
+    <span>글자 한 자 표현할 때 사용하는 태그입니다</span>
+    <span>글자 한 자 표현할 때 사용하는 태그입니다</span>
+    <span>글자 한 자 표현할 때 사용하는 태그입니다</span>
+    <span>글자 한 자 표현할 때 사용하는 태그입니다</span>
+    <span>글자 한 자 표현할 때 사용하는 태그입니다</span>
+
+    <address style="font-style: normal;">주소입니다</address>
+</body>
+
+</html>

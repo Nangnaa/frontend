@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        *{margin: 0; padding: 0;}/* 초기값으로 마진/패딩만 임시로 설정 */
+        
+        div{width: 150px;height: 150px; border:1px solid #000;}
+        .box1{margin: 50px;}
+        .box1:hover{width: 500px; 
+            cursor: pointer;
+            background-color: aquamarine;
+            transform: rotate(360deg);
+            /* 360도 회전 */
+            transition-delay : 0.5s;
+            /* x초뒤에 width값 500px로 변경 */
+            transition-duration: 5s;
+            /* 진행속도(길게 늘어지거나 돌아가는속도) 낮을수록 빨라짐 */
+            transition-timing-function: linear;
+            /* 시작에서 끝까지 똑같은 속도로 진행 */
+            transition-timing-function: ease-in-out;
+            /* 점점 느려짐 */
+        }
+
+        .box2{
+            background-color: blue;
+            cursor: pointer;
+        }
+        .box2:hover + .box3{
+            /* 바로 아래에 있는 형제요소를 선택할때는 자신과 아래요소를 선택하는 그사이에는 "+"를 사용 */
+            transform: translate(100px, 0);
+            /* 박스2를 눌렀을때 박스 3이 x값 100px만큼 움직임 */
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            /* 천천히이동 */
+        }
+        /* 선택자지정 */
+
+        .box3{transition: 1s;}
+        /* 돌아오는 초기값을 설정 */
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <br><br><br>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+    <div class="box6">box6</div>
+</body>
+</html>

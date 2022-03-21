@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<h1>증감연산자</h1>
+  
+ <!-- 
+   종류 ++, --
+      
+   전위연산자 - 계산 후에 바로값을 변수에 값을 적용 
+   var ++res, --res
+
+   후위연산자 - 계산 후에 바로값을 적용하지않고 다시 변수를 호출하거나 
+               다시 계산할때는 이전에 연산된 후위 연산자값을 적용한다
+   var res++, res--
+
+
+   var res = 20;
+  
+       ++res( 20 + 1 = 21)
+       res++( 20 + 1 = 20,,,,나중에 호출하게 되면 21)
+  -->
+
+    
+ <script>
+   a = 10;
+   b = 20;
+   c = 3; 
+
+   document.write(++a + "<br>"); //a 11
+   document.write(a++ + "<br>"); //a 11(12)
+   document.write(c++ + "<br>"); //c 3(4)
+   document.write(++a + b++ +"<br>")// a13 + b20(21)
+   document.write(++a + ++b)//a14 + b22  =>36
+
+
+
+ </script>
+
+
+
+
+</body>
+</html>

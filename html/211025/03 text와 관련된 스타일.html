@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- [text와 관련된 스타일]
+
+- line-height "normal, 숫자, 숫자em, %" : 줄간격
+
+- text-indent "숫자, 숫자em, %" : 들여쓰기 (음수 사용 시 내어쓰기)
+
+- text-align "left, right, center, justify" : 텍스트나 이미지 수평정렬
+  ** 자신의 자식요소를 정렬할 때 사용, 대신 자신의 가로값이 선언되어있어야 함
+- text-decoration "none, underline, overline, line-through" : 줄긋기 (유전되지 않음)
+
+- letter-spacing "normal, 숫자, 숫자em" : 글자 간격
+
+- word-spacing "" : 단어 사이 여백
+
+- text-transform "capitalize, uppercase, lowercase, none" : 영문자 변환 첫글자만 대문자 소문자
+
+- vertical-align "baseline, sup, sub, middle, text-top, -top, text-bottom, bottom" : 텍스트나 이미지 수직정렬 -->
+    <style>
+        .txt01 {
+            font-size: 20px;
+            line-height: 30px;
+            text-indent: 100px;
+            letter-spacing: 10px;
+        }
+        .txt02 {
+            font-size: 20px;
+            line-height: 1.5; /* px X   비율 O */
+            text-indent: 5%;  /* %는 부모 기준으로 100% */
+            text-decoration: overline;
+        }
+        .txt03 {
+            word-spacing: 10px;
+        }
+        .btn {
+            display: block;
+            width: 50px;
+            background-color: darkolivegreen;
+            text-indent: -9999px;
+        }
+        .btn2 {
+            text-decoration: none;
+        }.btn2:hover {
+            /* 커서 */
+            text-decoration: underline;
+        }.btn2:active {
+            /* 클릭 */
+            text-decoration: line-through;
+        }.btn2:visited {
+            /* 방문기록 */
+            text-decoration: overline;
+        }
+        .text-area {
+            background-color: lemonchiffon;
+            text-align: center;
+        }
+        .tf01 {
+            text-transform: none;
+        }
+        .tf02 {
+            text-transform: capitalize;
+        }
+        .tf03 {
+            text-transform: uppercase;
+        }
+        .tf04 {
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="txt01">
+        문장태그입니다<br>
+        문장태그입니다<br>
+        문장태그입니다<br>
+        문장태그입니다<br>
+    </p>
+    <br><br><br><br>
+    <p class="txt02">
+        문장태그입니다<br>
+        문장태그입니다<br>
+        문장태그입니다<br>
+        문장태그입니다<br>
+    </p>
+
+    <a href="#" class="btn">aaa</a>
+
+    <div class="text-area">text</div>
+    <span class="text-area">text</span>
+
+    <br><br><br><br>
+
+    <p class="txt03">
+        문장 태그입니다<br>
+        문장 태그입니다<br>
+        문장 태그입니다<br>
+        문장 태그입니다<br>
+    </p>
+
+    <br><br><br><br>
+
+    <a href=# class="btn2">링크걸기</a>
+
+    <br><br><br><br>
+    
+    <p class="tf01">abcdef</p>
+    <p class="tf02">abcdef</p>
+    <p class="tf03">abcdef</p>
+    <p class="tf04">abcdef</p>
+
+</body>
+
+</html>

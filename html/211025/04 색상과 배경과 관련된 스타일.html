@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        [색상과 배경과 관련된 스타일]
+
+https://www.webfx.com/web-design/color-picker/
+
+- color "영문자, RGB" : 글자 및 밑줄 색
+
+- background-color "영문자, RGB, trnasparent" : 배경색
+
+- background-image "none, url(파일 위치)" : 배경 그림
+
+- background-repeat "repeat, repeat-x, repeat-y, no-repeat" : 배경이미지 반복 여부
+
+- background-attachment "scroll, fixed" : 화면이 스크롤 될 때 이동 여부
+
+- background-position "top, bottom, left, center, right, 가로%, 세로%" : 
+                     이미지 반복 여부 가로p 세로p (음수 가능)
+     -->
+    <style>
+        
+        body {
+            background-color: lightsteelblue;
+            background-image: url(images/image.jpg);
+            /* image > color */
+            background-repeat: no-repeat;
+            /* background-repeat: no-repeat; */
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            height: 2000px;
+            background-attachment: scroll;
+            /* background-attachment: fixed; */
+            background-position: 100px 150px; /* x좌표, y좌표 */
+            /* background-position: center bottom; */
+
+            /* 위의 속성을 한 줄로 표현 */
+            background: lightsteelblue url(images/image.jpg) no-repeat 100 150;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

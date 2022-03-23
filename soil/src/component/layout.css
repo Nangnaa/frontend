@@ -1,0 +1,71 @@
+
+.header{width: 100%; height: 70px; background-color: aqua; 
+        float: left; justify-content: center; z-index: 0; position: absolute;
+}
+ .header_in{ width: 980px; height: 70px; background-color: rgb(87, 116, 106);
+        display: flex; margin:0 auto;}
+ .logo{width: 500px; height: 70px; background-color: violet;}
+.menu{width: 1500px; height:70px; background-color: darkblue; 
+   }
+.menu ul {float: left; margin: 60px 0 0 100px; }
+.menu ul > li{float: left; margin-right: 80px;}
+.menu ul > li > a{font-size: 20px; color: pink;} 
+
+/* .main{width: 100%; height: 100vh; background-color: chartreuse; overflow: auto;
+} */
+.main{  overflow-y: hidden;
+        overflow: auto;
+        width: 100%;
+        height: 100vh;
+        margin-top: 70px;
+      }
+.main-in{
+        margin: 0 auto;
+        width: 980px;
+        
+}
+.main::-webkit-scrollbar {
+        display: none;
+      }
+.inner{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        
+}
+/* .main_in{height: 100vh; display: flex; justify-content: center; align-items: center; font-size: 30px;}  */
+
+.bg-green{border:5px solid green;}
+/* .con1 {width:980px; } */
+.company{ padding-top: 150px; display: flex; margin: 0 auto;} 
+.con1 > b {font-size: 15px; color: #666666;}
+.con1 > section{border: 1px solid brown;
+        }
+.con1section{width: 100%; margin: 0 auto; top:0; left: 0;}
+.con1section > div > img {width: 450px;}
+
+.con1-img1{width: 200px;  float: left; margin-right: 10px; display: block; }
+.con1-img2{width: 40%;  float: left; }
+.con1-img3{width: 40%;  float: left; }
+.con1-img4{width: 40%;  float: left;}
+
+.bg-red{border:5px solid red;}
+.bg-blue{border:5px solid blue;}
+
+.divider {
+        width: 100%;
+        height: 5px;
+        background-color: gray;
+      }
+
+/* .content{ width: 100%; height: 600px; background-color: rgb(147, 168, 70);}
+.content_in{margin: 0 auto; width: 1200px; height: 600px; background-color: cadetblue;}
+.content_in > div{ float: left;}
+.con1{width: 1920px; height: 900px; background-color: brown;}
+.con2{width: 1920px; height: 900px; background-color: burlywood;}
+.con3{width: 1920px; height: 900px; background-color: rgb(107, 66, 13);}
+
+
+.footer{ width: 100%; height: 120px; background-color: rgb(120, 114, 207);} */
